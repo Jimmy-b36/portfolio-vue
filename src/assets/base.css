@@ -9,4 +9,10 @@
     font-weight: 300;
     font-style: normal;
   }
+  /* html,
+  body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  } */
 }

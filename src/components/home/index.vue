@@ -1,5 +1,12 @@
 <template>
-  <section class="grid grid-cols-7 gap-4 p-4 m-24 w-2/3">
+  <Button
+    class="h-screen w-14 items-center flex justify-center bg-zinc-900 hover:bg-zinc-800 z-300"
+    unstyled
+    @click="props.command"
+  >
+    <h1 class="transform -rotate-90 font-bold text-2xl">Home</h1>
+  </Button>
+  <section class="grid grid-cols-7 gap-4 p-4 m-24">
     <Card class="col-span-7 p-5 bg-zinc-900 rounded-lg" :unstyled="true">
       <template #title>
         <h1 class="text-4xl font-bold text-center text-orange-600">James Ball</h1>
@@ -58,6 +65,7 @@
 
 <script setup lang="ts">
 import { icons } from './iconImports'
+const props = defineProps<{ command: () => void }>()
 </script>
 
 <style lang="css"></style>
