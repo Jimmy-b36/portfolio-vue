@@ -2,13 +2,13 @@
   <main class="flex min-h-screen flex-col w-full overflow-x-hidden lg:flex-row xl:flex-row">
     <template v-for="(page, index) in pages" :key="page.name">
       <div
-        class="absolute h-screen items-center flex justify-center bg-zinc-900 hover:bg-zinc-800 transition-transform duration-500 ease-in-out"
+        class="absolute h-screen items-center flex justify-center bg-dark-100 transition-transform duration-500 ease-in-out"
         :style="{
           left: `${index * 3.5}rem`,
           transform: checkAdjusted(page.component, index + 1, currentRoute.index)
-            ? `translateX(calc(100vw - 10.5rem))`
+            ? `translateX(calc(100vw - 10.5em))`
             : 'none',
-          width: `calc(100vw - 7rem)`,
+          width: `calc(100vw - 7em)`,
         }"
       >
         <component :is="page.component" :command="page.command" />

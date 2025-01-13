@@ -1,20 +1,20 @@
 <template>
   <Button
-    class="h-screen w-14 items-center flex justify-center bg-zinc-900 hover:bg-zinc-800 z-300"
+    class="h-screen w-14 items-center flex justify-center bg-secondary-300 hover:bg-secondary-200"
     unstyled
     @click="props.command"
   >
     <h1 class="transform -rotate-90 font-bold text-2xl">Home</h1>
   </Button>
   <section class="grid grid-cols-7 gap-4 p-4 m-24">
-    <Card class="col-span-7 p-5 bg-zinc-900 rounded-lg" :unstyled="true">
+    <Card class="col-span-7 p-5 bg-dark-500 rounded-lg" :unstyled="true">
       <template #title>
-        <h1 class="text-4xl font-bold text-center text-orange-600">James Ball</h1>
+        <h1 class="text-4xl font-bold text-center text-highlight">James Ball</h1>
         <h2 class="text-lg text-center text-zinc-400">Full Stack Developer</h2>
       </template>
     </Card>
 
-    <Card class="col-span-3">
+    <Card class="col-span-3 !bg-dark-500">
       <template #content>
         <Image
           src="https://github.com/Jimmy-b36/portfolio/blob/main/public/images/ProfilePic.jpg?raw=true"
@@ -24,9 +24,9 @@
     </Card>
 
     <div class="col-span-4 grid gap-4">
-      <Card>
+      <Card class="!bg-dark-400">
         <template #title>
-          <h2 class="text-2xl text-center text-orange-600 font-bold">Who am I?</h2>
+          <h2 class="text-2xl text-center text-highlight font-bold">Who am I?</h2>
         </template>
         <template #content>
           <p class="text-zinc-200">
@@ -36,9 +36,9 @@
         </template>
       </Card>
 
-      <Card>
+      <Card class="!bg-dark-500">
         <template #title>
-          <h2 class="text-2xl text-center text-orange-600 font-bold">Education</h2>
+          <h2 class="text-2xl text-center text-highlight font-bold">Education</h2>
         </template>
         <template #content>
           <p class="text-zinc-200">
@@ -47,9 +47,9 @@
         </template>
       </Card>
 
-      <Card>
+      <Card class="!bg-dark-300">
         <template #title>
-          <h2 class="text-2xl text-center text-orange-600 font-bold">Technologies</h2>
+          <h2 class="text-2xl text-center text-highlight font-bold">Technologies</h2>
         </template>
         <template #content>
           <div class="grid grid-cols-6 gap-4 place-items-center">
