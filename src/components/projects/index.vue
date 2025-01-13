@@ -1,34 +1,54 @@
 <template>
   <Button
-    class="h-screen w-14 items-center flex justify-center bg-zinc-900 hover:bg-zinc-800 z-300"
+    class="h-screen w-14 items-center flex justify-center bg-ut_orange-300 hover:bg-ut_orange-200 z-300"
     unstyled
     @click="props.command"
   >
     <h1 class="transform -rotate-90 font-bold text-2xl">Projects</h1>
   </Button>
-  <section class="grid grid-cols-12 gap-4 p-4 m-24">
-    <Card class="col-span-12 p-5 bg-zinc-900 rounded-lg" :unstyled="true">
-      <template #title>Projects</template>
-      <template #subtitle>Card subtitle</template>
-      <template #content>
-        <p class="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-          repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa
-          ratione quam perferendis esse, cupiditate neque quas!
-        </p>
-      </template>
-      <template #footer>
-        <div class="flex gap-4 mt-1">
-          <Button label="Cancel" severity="secondary" outlined class="w-full" />
-          <Button label="Save" class="w-full" />
+
+  <section class="flex flex-wrap p-4 m-24 w-full justify-center">
+    <template v-for="project in projects" :key="project.id">
+      <div
+        class="relative col-span-12 lg:col-span-5 xl:col-span-4 h-[17rem] w-[30rem] perspective m-5"
+        @mouseleave="resetFlipped"
+      >
+        <div
+          class="relative transform-style-3d transition-transform duration-500"
+          :class="{ 'rotate-y-180': flipped?.id === project.id }"
+        >
+          <CardFront :project="project" @mouseenter="flipCard(project)" />
+          <CardBack :project="project" @mouseleave="flipped = null" />
         </div>
-      </template>
-    </Card>
+      </div>
+    </template>
   </section>
 </template>
+
 <script setup lang="ts">
+import projects from '@/data/projects.json'
+import { ref } from 'vue'
+
 const props = defineProps<{
   command: () => void
 }>()
+
+export interface IProject {
+  id: number
+  title: string
+  description: string
+  image: string
+  webUrl: string
+  gitUrl: string
+}
+
+const flipped = ref<IProject | null>(null)
+
+const flipCard = (project: IProject) => {
+  flipped.value = flipped.value?.id === project.id ? null : project
+}
+
+const resetFlipped = () => {
+  flipped.value = null
+}
 </script>
-<style lang="css"></style>
