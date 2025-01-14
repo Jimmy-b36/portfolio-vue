@@ -78,7 +78,16 @@ export default {
         900: '#bae8f4',
       },
     },
-    extend: {},
+    extend: {
+      screens: {
+        xs: '480px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        xxl: '1760px',
+      },
+    },
   },
   plugins: [require('tailwindcss-primeui'), require('tailwindcss-3d')],
 }

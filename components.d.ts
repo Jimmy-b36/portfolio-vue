@@ -7,22 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Accordion: typeof import('primevue/accordion')['default']
-    AccordionTab: typeof import('primevue/accordiontab')['default']
     Button: typeof import('primevue/button')['default']
     Card: typeof import('primevue/card')['default']
     CardBack: typeof import('./src/components/projects/CardBack.vue')['default']
     CardFront: typeof import('./src/components/projects/CardFront.vue')['default']
-    Contact: typeof import('./src/components/contact/index.vue')['default']
-    Drawer: typeof import('primevue/drawer')['default']
     Home: typeof import('./src/components/home/index.vue')['default']
     Image: typeof import('primevue/image')['default']
-    InputText: typeof import('primevue/inputtext')['default']
-    Menubar: typeof import('primevue/menubar')['default']
-    Message: typeof import('primevue/message')['default']
-    Panel: typeof import('primevue/panel')['default']
+    NavButton: typeof import('./src/components/NavButton.vue')['default']
     Projects: typeof import('./src/components/projects/index.vue')['default']
-    SelectButton: typeof import('primevue/selectbutton')['default']
-    Textarea: typeof import('primevue/textarea')['default']
   }
 }
