@@ -1,24 +1,22 @@
 <template>
-  <Button
-    class="h-screen w-14 items-center flex justify-center bg-ut_orange-300 hover:bg-ut_orange-200"
-    unstyled
-    @click="props.command"
-  >
-    <h1 class="transform -rotate-90 font-bold text-2xl">Projects</h1>
-  </Button>
+  <slot name="navigation"> </slot>
 
-  <section class="flex flex-wrap p-4 m-24 w-full justify-center">
+  <section class="flex flex-wrap p-4 lg:m-24 mt-12 w-full justify-center">
     <template v-for="project in projects" :key="project.id">
       <div
-        class="relative col-span-12 lg:col-span-5 xl:col-span-4 h-[15rem] w-[25rem] perspective m-5"
+        class="relative col-span-12 lg:col-span-5 xl:col-span-4 lg:h-[15rem] h-[12.25rem] w-[25rem] perspective m-5"
         @mouseleave="resetFlipped"
       >
         <div
           class="relative transform-style-3d transition-transform duration-500"
           :class="{ 'rotate-y-180': flipped?.id === project.id }"
         >
-          <CardFront :project="project" @mouseenter="flipCard(project)" />
-          <CardBack :project="project" @mouseleave="flipped = null" />
+          <CardFront
+            :project="project"
+            @mouseenter="flipCard(project)"
+            @touchstart="flipCard(project)"
+          />
+          <CardBack :project="project" @mouseleave="flipped = null" @touchend="flipped = null" />
         </div>
       </div>
     </template>

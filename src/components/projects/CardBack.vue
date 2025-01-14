@@ -1,16 +1,16 @@
 <template>
   <div class="absolute inset-0 backface-hidden rotate-y-180">
     <Card
-      class="xl:col-span-3 p-5 flex flex-col h-[16rem] justify-center items-center bg-dark-500 rounded-lg w-full text-white"
+      class="xl:col-span-3 p-5 flex flex-col lg:h-[16rem] h-[13rem] justify-center items-center bg-dark-500 rounded-lg w-full text-white"
       :unstyled="true"
     >
       <template #header>
-        <h1 class="text-2xl font-bold text-center">{{ project.title }}</h1>
+        <h1 class="text-lg lg:text-3xl font-bold text-center">{{ project.title }}</h1>
       </template>
 
       <template #content>
         <div class="flex flex-col justify-center items-center">
-          <p class="text-zinc-200 text-center">
+          <p class="text-zinc-200 text-center lg:text-lg text-sm">
             {{ project.description }}
           </p>
           <div class="flex flex-row gap-5 mt-3">
