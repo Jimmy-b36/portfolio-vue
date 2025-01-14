@@ -1,7 +1,7 @@
 <template>
   <div class="absolute inset-0 backface-hidden rotate-y-180">
     <Card
-      class="col-span-6 p-5 flex flex-col h-[16rem] justify-center items-center bg-dark-500 rounded-lg w-full text-white"
+      class="xl:col-span-3 p-5 flex flex-col h-[16rem] justify-center items-center bg-dark-500 rounded-lg w-full text-white"
       :unstyled="true"
     >
       <template #header>
@@ -21,6 +21,10 @@
               <i> <img :src="gitSvg" alt="github logo" class="h-10 w-10" /></i>
             </a>
           </div>
+        </div>
+
+        <div class="flex flex-row flex-wrap justify-center items-center gap-3 mt-3">
+          <img v-for="tech in project.tech" :src="tech" :alt="project.title" class="h-7 w-7" />
         </div>
       </template>
     </Card>
