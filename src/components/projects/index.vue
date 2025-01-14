@@ -1,6 +1,6 @@
 <template>
   <Button
-    class="h-screen w-14 items-center flex justify-center bg-ut_orange-300 hover:bg-ut_orange-200 z-300"
+    class="h-screen w-14 items-center flex justify-center bg-ut_orange-300 hover:bg-ut_orange-200"
     unstyled
     @click="props.command"
   >
@@ -10,7 +10,7 @@
   <section class="flex flex-wrap p-4 m-24 w-full justify-center">
     <template v-for="project in projects" :key="project.id">
       <div
-        class="relative col-span-12 lg:col-span-5 xl:col-span-4 h-[17rem] w-[30rem] perspective m-5"
+        class="relative col-span-12 lg:col-span-5 xl:col-span-4 h-[15rem] w-[25rem] perspective m-5"
         @mouseleave="resetFlipped"
       >
         <div
@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import projects from '@/data/projects.json'
+import projects from '@/data/projects.ts'
 import { ref } from 'vue'
 
 const props = defineProps<{
@@ -40,6 +40,7 @@ export interface IProject {
   image: string
   webUrl: string
   gitUrl: string
+  tech: string[]
 }
 
 const flipped = ref<IProject | null>(null)
