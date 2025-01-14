@@ -98,10 +98,10 @@
 </template>
 
 <script setup lang="ts">
-import gitSvg from '@/assets/icons/github-dark.svg?url'
-import linkedInSvg from '@/assets/icons/linkedin.svg?url'
 import profilePic2 from '@/assets/images/profile-pic-tall.jpg?url'
 import profilePic from '@/assets/images/profile-pic.png?url'
+import gitSvg from '/icons/github-dark.svg?url'
+import linkedInSvg from '/icons/linkedin.svg?url'
 
 import { icons } from '@/utils/iconImports'
 import { ref } from 'vue'
