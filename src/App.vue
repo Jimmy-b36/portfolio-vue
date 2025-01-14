@@ -23,9 +23,9 @@ import Home from '@/components/home/index.vue'
 import Projects from '@/components/projects/index.vue'
 import { useNavigationStore } from '@/stores/navigation'
 import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
+import { shallowRef } from 'vue'
 
-const pages = ref([
+const pages = shallowRef([
   {
     name: 'Contact',
     command: () =>
