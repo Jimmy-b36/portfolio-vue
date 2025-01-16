@@ -1,7 +1,7 @@
 <template>
   <main class="flex min-h-screen flex-col w-full overflow-x-hidden bg-dark-100">
     <!-- Mobile Nav -->
-    <nav class="lg:hidden flex justify-around bg-dark-300 p-4 fixed w-full z-50">
+    <nav class="xl:hidden flex justify-around bg-dark-300 p-4 fixed w-full z-50">
       <Button
         v-for="page in pages"
         :key="page.name"
@@ -13,7 +13,7 @@
     </nav>
 
     <!-- Desktop Nav -->
-    <div class="hidden lg:flex">
+    <div class="hidden xl:flex">
       <template v-for="(page, index) in pages" :key="page.name">
         <div
           class="absolute h-screen items-center flex justify-center bg-dark-100 transition-transform duration-500 ease-in-out"
@@ -40,7 +40,7 @@
     </div>
 
     <!-- Mobile Content -->
-    <div class="lg:hidden pt-16">
+    <div class="xl:hidden pt-16">
       <component :is="currentRoute.component" :command="() => {}" />
     </div>
   </main>
