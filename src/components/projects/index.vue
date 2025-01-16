@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-import projects, { type IProject } from '@/data/projects.ts'
+import { type IProject, projects } from '@/data/projects.ts'
 import { copyToClipboard } from '@/utils/helpers'
 import { ref } from 'vue'
 

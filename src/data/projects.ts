@@ -3,7 +3,7 @@ import aiDetector from '@/assets/images/ai-detector-research.png?url'
 import borderRadiusPreviewer from '@/assets/images/border-radius-previewer.png?url'
 import chromeExtension from '@/assets/images/chrome-extension.png?url'
 import sortingAlgorithms from '@/assets/images/sorting.png?url'
-export default [
+export const projects = [
   {
     id: 1,
     title: 'AI Detector Research Tool UI',
