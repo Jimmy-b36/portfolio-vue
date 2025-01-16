@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { type IProject } from './index.vue'
+import { type IProject } from '@/data/projects.ts'
 
 const { project } = defineProps<{
   project: IProject
