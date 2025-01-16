@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
+import gitSvg from '@/assets/icons/github-dark.svg?url'
 import { type IProject } from './index.vue'
-import gitSvg from '/icons/github-dark.svg?url'
 
 defineProps<{
   project: IProject

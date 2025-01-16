@@ -1,15 +1,15 @@
+import nextjsIcon from '@/assets/icons/nextjs_icon_dark.svg?url'
+import piniaIcon from '@/assets/icons/pinia.svg?url'
+import pythonIcon from '@/assets/icons/python.svg?url'
+import tailwindIcon from '@/assets/icons/tailwindcss.svg?url'
+import typescriptIcon from '@/assets/icons/typescript.svg?url'
+import vueIcon from '@/assets/icons/vue.svg?url'
+import vuetifyIcon from '@/assets/icons/vuetify.svg?url'
 import aiDetectorDashboard from '@/assets/images/ai-detector-research-dashboard.png?url'
 import aiDetector from '@/assets/images/ai-detector-research.png?url'
 import borderRadiusPreviewer from '@/assets/images/border-radius-previewer.png?url'
 import chromeExtension from '@/assets/images/chrome-extension.png?url'
 import sortingAlgorithms from '@/assets/images/sorting.png?url'
-import nextjsIcon from '/icons/nextjs_icon_dark.svg?url'
-import piniaIcon from '/icons/pinia.svg?url'
-import pythonIcon from '/icons/python.svg?url'
-import tailwindIcon from '/icons/tailwindcss.svg?url'
-import typescriptIcon from '/icons/typescript.svg?url'
-import vueIcon from '/icons/vue.svg?url'
-import vuetifyIcon from '/icons/vuetify.svg?url'
 export default [
   {
     id: 1,
