@@ -1,7 +1,7 @@
 import Home from '@/components/home/index.vue'
 import Projects from '@/components/projects/index.vue'
 import { defineStore } from 'pinia'
-import { ref, shallowRef } from 'vue'
+import { shallowRef } from 'vue'
 
 type IRoutes = {
   component: typeof Home | typeof Projects

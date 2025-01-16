@@ -1,10 +1,3 @@
-import nextjsIcon from '@/assets/icons/nextjs_icon_dark.svg?url'
-import piniaIcon from '@/assets/icons/pinia.svg?url'
-import pythonIcon from '@/assets/icons/python.svg?url'
-import tailwindIcon from '@/assets/icons/tailwindcss.svg?url'
-import typescriptIcon from '@/assets/icons/typescript.svg?url'
-import vueIcon from '@/assets/icons/vue.svg?url'
-import vuetifyIcon from '@/assets/icons/vuetify.svg?url'
 import aiDetectorDashboard from '@/assets/images/ai-detector-research-dashboard.png?url'
 import aiDetector from '@/assets/images/ai-detector-research.png?url'
 import borderRadiusPreviewer from '@/assets/images/border-radius-previewer.png?url'
@@ -13,51 +6,67 @@ import sortingAlgorithms from '@/assets/images/sorting.png?url'
 export default [
   {
     id: 1,
+    title: 'AI Detector Research Tool UI',
     description: 'A frontend for the AI detector research tool.',
-    title: 'AI detector research tool dashboard',
     gitUrl: 'https://github.com/OriginalityAI/Ai-detector-research-tool-UI',
     webUrl: '',
     image: aiDetectorDashboard,
-    tech: [vueIcon, vuetifyIcon, typescriptIcon, piniaIcon, pythonIcon],
+    tech: ['Vue.js', 'Vuetify', 'TypeScript', 'Pinia', 'Python'],
+    role: 'Lead Developer',
   },
   {
     id: 2,
+    title: 'AI Detector Research Tool',
     description:
       'Open-source command-line Python tool enabling users to test multiple AI detectors accuracy on large datasets.',
-    title: 'AI detector research tool',
     gitUrl: 'https://github.com/OriginalityAI/AI-detector-research-tool',
     webUrl: '',
     image: aiDetector,
-    tech: [pythonIcon],
+    tech: ['Python'],
+    role: 'Lead Developer',
   },
   {
     id: 3,
+    title: 'Ai Detector Chrome Extension',
     description:
       "A Chrome extension that allows users to run Originality.ai's AI detector on any website.",
-    title: 'AI detector Chrome extension',
     gitUrl: '',
     webUrl:
       'https://chromewebstore.google.com/detail/ai-detector-and-human-wri/kdngfaamkbbkdbemejnlkmjfpmndjdmb',
     image: chromeExtension,
-    tech: [vueIcon, vuetifyIcon, typescriptIcon, piniaIcon],
+    tech: ['Vue.js', 'Vuetify', 'TypeScript', 'Pinia'],
+    role: 'Lead Developer',
   },
   {
     id: 4,
+    title: 'Sorting Algorithm Visualizer',
     description:
       'A tool designed to help users easily learn and understand various sorting algorithms. ',
-    title: 'Sorting algorithm visualizer',
     gitUrl: 'https://github.com/Jimmy-b36/visualize-algorithms',
     webUrl: 'https://visualize-algorithms-lld6.vercel.app/',
     image: sortingAlgorithms,
-    tech: [nextjsIcon, tailwindIcon, typescriptIcon],
+    tech: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    role: '',
   },
   {
     id: 5,
-    description: 'A border radius previewer for easy copy and paste.',
     title: 'Border Radius Previewer',
+    description: 'A border radius previewer for easy copy and paste.',
     gitUrl: 'https://github.com/Jimmy-b36/border-radius-preview',
     webUrl: 'https://border-radius-preview.vercel.app/',
     image: borderRadiusPreviewer,
-    tech: [nextjsIcon, tailwindIcon, typescriptIcon],
+    tech: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    role: '',
   },
 ]
+
+export interface IProject {
+  id: number
+  title: string
+  description: string
+  image: string
+  webUrl: string
+  gitUrl: string
+  tech: string[]
+  role: string
+}
