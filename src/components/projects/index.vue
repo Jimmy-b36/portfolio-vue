@@ -1,8 +1,8 @@
 <template>
   <slot name="navigation"> </slot>
 
-  <section class="flex flex-wrap flex-col p-4 lg:m-24 mt-12 w-full justify-center">
-    <Card class="col-span-7 p-5 rounded-lg mb-20 bg-dark-500" :unstyled="true">
+  <section class="flex flex-wrap flex-col p-4 lg:m-24 xxl:mt-12 w-full justify-center">
+    <Card class="col-span-7 p-5 rounded-lg mb-5 bg-dark-500" :unstyled="true">
       <template #title>
         <h1 class="text-4xl font-bold text-center text-highlight">James Ball</h1>
         <h2 class="text-lg text-center text-light-50">
