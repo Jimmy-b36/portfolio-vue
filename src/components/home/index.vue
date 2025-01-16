@@ -3,8 +3,10 @@
   <section class="grid grid-cols-7 gap-4 p-4 lg:m-24 mt-12 xxl:gap-12 xxl:m-56">
     <Card class="col-span-7 p-5 rounded-lg" :unstyled="true" :class="cardColor">
       <template #title>
-        <h1 class="text-4xl font-bold text-center text-highlight">James Ball</h1>
-        <h2 class="text-lg text-center text-light-50">
+        <h1 class="text-5xl font-bold text-center text-highlight">
+          Hi I'm James Ball <span class="inline-block origin-[70%_70%] animate-wave">👋</span>
+        </h1>
+        <h2 class="text-lg text-center mt-2 text-light-50">
           <i class="pi pi-map-marker"></i> Canada | Full Stack Developer
         </h2>
       </template>
@@ -82,7 +84,7 @@
         </template>
         <template #content>
           <p class="text-light-50 text-center">
-            As a web developer and ski instructor, I’m passionate about combining adventure and
+            As a Web Developer and Ski Instructor, I’m passionate about combining adventure and
             technology to solve problems and improve lives. In my downtime, I love climbing, skiing,
             and reading epic fantasy like The Stormlight Archive.
           </p>

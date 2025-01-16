@@ -2,36 +2,9 @@
   <slot name="navigation"> </slot>
 
   <section class="flex flex-wrap flex-col p-4 lg:m-24 xxl:mt-12 w-full justify-center">
-    <Card class="col-span-7 p-5 rounded-lg mb-5 bg-dark-500" :unstyled="true">
-      <template #title>
-        <h1 class="text-4xl font-bold text-center text-highlight">James Ball</h1>
-        <h2 class="text-lg text-center text-light-50">
-          <i class="pi pi-map-marker"></i> Canada | Full Stack Developer
-        </h2>
-      </template>
-      <template #content>
-        <div class="flex justify-center items-center space-x-4 mt-2">
-          <a href="https://www.github.com/Jimmy-b36" target="_blank" rel="noopener noreferrer">
-            <i class="pi pi-github text-2xl text-light-50 hover:text-highlight"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/james-ball-57831a229/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="pi pi-linkedin text-2xl text-light-50 hover:text-highlight"></i>
-          </a>
-          <button
-            @click="copyEmail('jamie.j.ball@gmail.com')"
-            class="text-light-50 hover:text-highlight"
-          >
-            <i class="pi pi-envelope text-2xl" v-if="copied === null"></i>
-            <i v-if="copied === true" class="pi pi-check text-green-400"></i>
-            <i v-if="copied === false" class="pi pi-times text-red-400"></i>
-          </button>
-        </div>
-      </template>
-    </Card>
+    <h1 class="text-5xl font-bold text-center text-highlight mb-7">
+      Some Of My Work <span class="inline-block animate-bounce">👇</span>
+    </h1>
     <div class="flex flex-wrap flex-row justify-center items-center">
       <template v-for="project in projects" :key="project.id">
         <div
@@ -51,6 +24,28 @@
           </div>
         </div>
       </template>
+    </div>
+    <div class="fixed bottom-0 w-full left-0 mb-12">
+      <div class="flex justify-center items-center space-x-4">
+        <a href="https://www.github.com/Jimmy-b36" target="_blank" rel="noopener noreferrer">
+          <i class="pi pi-github text-2xl text-light-50 hover:text-highlight"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/james-ball-57831a229/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="pi pi-linkedin text-2xl text-light-50 hover:text-highlight"></i>
+        </a>
+        <button
+          @click="copyEmail('jamie.j.ball@gmail.com')"
+          class="text-light-50 hover:text-highlight"
+        >
+          <i class="pi pi-envelope text-2xl" v-if="copied === null"></i>
+          <i v-if="copied === true" class="pi pi-check text-green-400"></i>
+          <i v-if="copied === false" class="pi pi-times text-red-400"></i>
+        </button>
+      </div>
     </div>
   </section>
 </template>
