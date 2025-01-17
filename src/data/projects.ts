@@ -53,7 +53,7 @@ export const projects = [
     title: 'Border Radius Previewer',
     description: 'A border radius previewer for easy copy and paste.',
     gitUrl: 'https://github.com/Jimmy-b36/border-radius-preview',
-    webUrl: 'https://border-radius-preview.vercel.app/',
+    webUrl: 'https://border-radius-previewer-one.vercel.app//',
     image: borderRadiusPreviewer,
     tech: ['Next.js', 'Tailwind CSS', 'TypeScript'],
     role: '',
