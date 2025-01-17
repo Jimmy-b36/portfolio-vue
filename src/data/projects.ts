@@ -46,7 +46,7 @@ export const projects = [
     webUrl: 'https://visualize-algorithms-lld6.vercel.app/',
     image: sortingAlgorithms,
     tech: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    role: '',
+    role: 'Personal project',
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ export const projects = [
     webUrl: 'https://border-radius-previewer-one.vercel.app//',
     image: borderRadiusPreviewer,
     tech: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    role: '',
+    role: 'Personal project',
   },
 ]
 
