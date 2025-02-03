@@ -117,7 +117,7 @@
 <script setup lang="ts">
 import gitSvg from '@/assets/icons/github-dark.svg?url'
 import linkedInSvg from '@/assets/icons/linkedIn.svg?url'
-import profilePic2 from '@/assets/images/profile-pic-tall.jpg?url'
+import profilePic2 from '@/assets/images/profile-pic-tall.jpeg?url'
 import { copyToClipboard } from '@/utils/helpers'
 
 import { icons } from '@/utils/iconImports'
