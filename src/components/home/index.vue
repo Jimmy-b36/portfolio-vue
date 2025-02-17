@@ -32,6 +32,7 @@
                 <a
                   @click="copyEmail('jamie.j.ball@gmail.com')"
                   class="cursor-pointer hover:underline"
+                  href="mailto:jamie.j.ball@gmail.com"
                   v-if="copied === null"
                   >jamie.j.ball@gmail.com</a
                 >
@@ -59,6 +60,16 @@
                       alt="linkedin logo"
                       class="h-auto w-10 m-2 cursor-pointer hover:scale-110 transition-transform duration-200" /></a
                 ></i>
+                <Button
+                  :unstyled="true"
+                  @click="openResume"
+                  class="rounded-lg bg-transparent text-white border-none px-2 pt-1 font-bold cursor-pointer"
+                >
+                  <i
+                    class="pi pi-file-pdf hover:scale-110 transition-transform duration-200"
+                    style="font-size: 2.2rem; color: white"
+                  ></i>
+                </Button>
               </div>
             </div>
           </template>
@@ -118,6 +129,8 @@
 import gitSvg from '@/assets/icons/github-dark.svg?url'
 import linkedInSvg from '@/assets/icons/linkedIn.svg?url'
 import profilePic2 from '@/assets/images/profile-pic-tall.jpeg?url'
+import Button from 'primevue/button'
+
 import { copyToClipboard } from '@/utils/helpers'
 
 import { icons } from '@/utils/iconImports'
@@ -125,6 +138,11 @@ import { ref } from 'vue'
 const cardColor = ref<string>('!bg-dark-500')
 
 const copied = ref<boolean | null>(null)
+
+const openResume = () => {
+  console.log('🥶 Opening resume')
+  window.open('/src/assets/James_Ball_Resume.pdf', '_blank')
+}
 
 const copyEmail = (email: string) => {
   copied.value = copyToClipboard(email)
