@@ -129,6 +129,7 @@
 import gitSvg from '@/assets/icons/github-dark.svg?url'
 import linkedInSvg from '@/assets/icons/linkedIn.svg?url'
 import profilePic2 from '@/assets/images/profile-pic-tall.jpeg?url'
+import pdf from '@/assets/James_Ball_Resume.pdf?url'
 import Button from 'primevue/button'
 
 import { copyToClipboard } from '@/utils/helpers'
@@ -139,10 +140,7 @@ const cardColor = ref<string>('!bg-dark-500')
 
 const copied = ref<boolean | null>(null)
 
-const openResume = () => {
-  console.log('🥶 Opening resume')
-  window.open('/src/assets/James_Ball_Resume.pdf', '_blank')
-}
+const openResume = () => window.open(pdf, '_blank')
 
 const copyEmail = (email: string) => {
   copied.value = copyToClipboard(email)
