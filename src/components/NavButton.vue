@@ -6,7 +6,7 @@
     @click="props.command"
     v-if="!props.isHidden"
   >
-    <p class="transform -rotate-90 font-bold text-2xl text-light-100">{{ props.title }}</p>
+    <p class="transform -rotate-90 font-bold text-2xl text-dark-100">{{ props.title }}</p>
   </Button>
 </template>
 <script setup lang="ts">

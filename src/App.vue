@@ -62,7 +62,7 @@ const pages = shallowRef([
         index: 1,
       }),
     component: Projects,
-    color: ['bg-ut_orange-300', 'hover:bg-ut_orange-200'],
+    color: ['bg-[#96E6B3]', 'hover:bg-[#6ADC94]'],
   },
   {
     name: 'Home',
@@ -72,7 +72,7 @@ const pages = shallowRef([
         index: 2,
       }),
     component: Home,
-    color: ['bg-secondary-300', 'hover:bg-secondary-200'],
+    color: ['bg-[#F2E94E]', 'hover:bg-[#EEE31B]'],
   },
 ])
 
